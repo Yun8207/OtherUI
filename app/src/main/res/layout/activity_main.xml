@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <CheckBox
+        android:id="@+id/opt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Opt1"
+        />
+    <RadioGroup
+        android:id="@+id/years"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/year1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="under20"/>
+        <RadioButton
+            android:id="@+id/year2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20~40"/>
+        <RadioButton
+            android:id="@+id/year3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="40~60"/>
+        <RadioButton
+            android:id="@+id/year4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="60+"/>
+
+    </RadioGroup>
+    <ToggleButton
+        android:id="@+id/tbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOff="No"
+        android:textOn="Yes"/>
+
+    <co.ceryle.segmentedbutton.SegmentedButtonGroup
+        android:id="@+id/segmentedButtonGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:elevation="2dp"
+        app:sbg_animateSelector="fastOutSlowIn"
+        app:sbg_animateSelectorDuration="1000"
+        app:sbg_backgroundColor="@color/white"
+        app:sbg_dividerColor="@color/grey_500"
+        app:sbg_dividerPadding="10dp"
+        app:sbg_dividerRadius="10dp"
+        app:sbg_dividerSize="4dp"
+        app:sbg_position="1"
+        app:sbg_radius="2dp"
+        app:sbg_ripple="true"
+        app:sbg_rippleColor="@color/blue_300"
+        app:sbg_selectorColor="@color/grey_500">
+
+        <co.ceryle.segmentedbutton.SegmentedButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:sb_text="Button 1"/>
+
+        <co.ceryle.segmentedbutton.SegmentedButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:sb_text="Button 2"/>
+
+        <co.ceryle.segmentedbutton.SegmentedButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:sb_text="Button 3"/>
+    </co.ceryle.segmentedbutton.SegmentedButtonGroup>
+
+    <TextView
+        android:id="@+id/newdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="chDate"
+        android:hint="choose date"/>
+
+    <ViewFlipper
+        android:id="@+id/vf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inAnimation="@anim/updown_show"
+        android:outAnimation="@anim/updown_hide"
+        android:flipInterval="500"
+        android:persistentDrawingCache="animation">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/num0"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/num1"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/num2"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/num3"/>
+
+        </LinearLayout>
+    </ViewFlipper>
+</LinearLayout>
